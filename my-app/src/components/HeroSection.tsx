@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
@@ -35,9 +36,9 @@ export default function HeroSection() {
         </p>
         
         <div className="flex justify-center gap-4">
-          <button className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-blue-600/30 hover:bg-blue-500 hover:shadow-blue-500/40 transition-all">
+          <Link href="/resources" className="bg-blue-600 px-6 py-3 rounded-lg text-white hover:bg-blue-700">
             Explore Resources
-          </button>
+          </Link>
           <button className="bg-slate-800/80 text-slate-200 font-semibold px-6 py-3 rounded-xl border border-slate-700 hover:bg-slate-700/80 transition-all">
             Learn More
           </button>

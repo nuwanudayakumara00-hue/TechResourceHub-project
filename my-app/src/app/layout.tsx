@@ -2,7 +2,7 @@ import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Manrope, Fraunces } from 'next/font/google';
 import './globals.css';
-
+import Header from '@/components/Header';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -47,10 +47,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${manrope.variable} ${fraunces.variable}`}>
       <body className={manrope.className} style={{ '--font-sans': 'var(--font-manrope)', '--font-display': 'var(--font-fraunces)' } as React.CSSProperties}>
+        
+        {/* Header එක මෙතැනට එකතු කළා */}
+        <Header />
+
         {children}
 
         <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Ftechresour5823back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.19" />
-        <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2" /></body>
+        <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2" />
+      </body>
     </html>
   );
 }
