@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Code, Sparkles, BookOpen, Rocket, Users } from "lucide-react";
 
+import CommunitySection from "@/components/CommunitySection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import ResourcesSection from "@/components/ResourcesSection";
@@ -135,7 +136,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sections */}
+      {/* Git Together / Community Section */}
+      <CommunitySection />
+
+      {/* Page Sections */}
       <AboutSection />
       <ServicesSection />
       <ResourcesSection />
