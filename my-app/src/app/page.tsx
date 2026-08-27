@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Code, Sparkles, Zap, Layers } from "lucide-react";
+import { ArrowRight, Code, Sparkles, BookOpen, Rocket, Users, FileText } from "lucide-react";
 
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -44,65 +44,66 @@ export default function Home() {
           >
             <Sparkles className="w-4 h-4 text-blue-400" />
             <span className="text-sm font-medium text-blue-100 tracking-wide">
-              Next.js 16 + Tailwind v4 + Motion
+              Your Central Hub for Tech & Learning Resources
             </span>
           </motion.div>
 
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 bg-gradient-to-br from-white via-blue-200 to-blue-500 bg-clip-text text-transparent drop-shadow-sm">
-            Modern UI Experience
+            Empowering Tech Students & Developers
           </h1>
 
           <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Build beautiful, highly interactive applications with the latest web
-            technologies. Fully responsive, animated, and exceptionally fast.
+            Access top-curated programming materials, lecture guides, source codes, and tech documentation all in one place.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-            <motion.button
+            <motion.a
+              href="#resources"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-semibold flex items-center justify-center gap-2 transition-all shadow-[0_0_30px_rgba(37,99,235,0.4)] hover:shadow-[0_0_50px_rgba(37,99,235,0.6)]"
             >
-              Start Building <ArrowRight className="w-5 h-5" />
-            </motion.button>
+              Browse Resources <ArrowRight className="w-5 h-5" />
+            </motion.a>
 
-            <motion.button
+            <motion.a
+              href="#services"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-2xl font-semibold transition-all backdrop-blur-md flex items-center justify-center gap-2"
             >
-              <Layers className="w-5 h-5 text-slate-300" />
-              Explore Components
-            </motion.button>
+              <Rocket className="w-5 h-5 text-slate-300" />
+              Our Services
+            </motion.a>
           </div>
         </motion.div>
 
-        {/* Animated Features Grid */}
+        {/* Hero Features Grid */}
         <div className="z-10 grid grid-cols-1 md:grid-cols-3 gap-6 mt-32 w-full max-w-6xl">
           {[
             {
-              icon: Zap,
-              title: "Lightning Fast",
-              desc: "Powered by the latest Next.js 16 App Router and React 19.",
+              icon: BookOpen,
+              title: "Curated Study Materials",
+              desc: "Comprehensive lecture notes, guides, and tech documentation.",
               color: "text-amber-400",
               bg: "bg-amber-400/10",
               border: "border-amber-400/20",
             },
             {
-              icon: Sparkles,
-              title: "Fluid Animations",
-              desc: "Silky smooth 60fps animations built seamlessly with Framer Motion.",
-              color: "text-purple-400",
-              bg: "bg-purple-400/10",
-              border: "border-purple-400/20",
-            },
-            {
               icon: Code,
-              title: "Modern Styling",
-              desc: "Next-generation utility-first styling with Tailwind CSS v4 engine.",
+              title: "Source Code & Projects",
+              desc: "Real-world project repositories, templates, and code snippets.",
               color: "text-emerald-400",
               bg: "bg-emerald-400/10",
               border: "border-emerald-400/20",
+            },
+            {
+              icon: Users,
+              title: "Community Driven",
+              desc: "Built by students and developers to support peer learning.",
+              color: "text-purple-400",
+              bg: "bg-purple-400/10",
+              border: "border-purple-400/20",
             },
           ].map((feature, idx) => (
             <motion.div
