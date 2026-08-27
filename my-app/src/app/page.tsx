@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Code, Sparkles, BookOpen, Rocket, Users } from "lucide-react";
 
 import CommunitySection from "@/components/CommunitySection";
+import CurationGuideSection from "@/components/CurationGuideSection"; // 1. Import කිරීම
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import ResourcesSection from "@/components/ResourcesSection";
@@ -138,6 +139,9 @@ export default function Home() {
 
       {/* Git Together / Community Section */}
       <CommunitySection />
+
+      {/* Curation Guide Section */}
+      <CurationGuideSection />
 
       {/* Page Sections */}
       <AboutSection />
