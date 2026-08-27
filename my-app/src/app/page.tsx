@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Code, Sparkles, BookOpen, Rocket, Users } from "lucide-react";
 
@@ -59,25 +60,28 @@ export default function Home() {
             Access top-curated programming materials, lecture guides, source codes, and tech documentation all in one place.
           </p>
 
+          {/* Action Buttons with Working Page Navigation */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-            <motion.a
-              href="#resources"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-semibold flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-600/30"
-            >
-              Browse Resources <ArrowRight className="w-5 h-5" />
-            </motion.a>
+            <Link href="/resources" className="w-full sm:w-auto">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-semibold flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-600/30 cursor-pointer"
+              >
+                Browse Resources <ArrowRight className="w-5 h-5" />
+              </motion.button>
+            </Link>
 
-            <motion.a
-              href="#services"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-8 py-4 bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700/80 rounded-2xl font-semibold transition-all backdrop-blur-md flex items-center justify-center gap-2"
-            >
-              <Rocket className="w-5 h-5 text-slate-400" />
-              Our Services
-            </motion.a>
+            <Link href="/services" className="w-full sm:w-auto">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto px-8 py-4 bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700/80 rounded-2xl font-semibold transition-all backdrop-blur-md flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Rocket className="w-5 h-5 text-slate-400" />
+                Our Services
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
 
