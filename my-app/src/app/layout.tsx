@@ -48,14 +48,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${manrope.variable} ${fraunces.variable}`}>
       <body 
-        className={manrope.className} 
+        className={`${manrope.className} bg-[#070714] text-white selection:bg-purple-500 selection:text-white`} 
         style={{ '--font-sans': 'var(--font-manrope)', '--font-display': 'var(--font-fraunces)' } as React.CSSProperties}
       >
         {/* Navigation Header */}
         <Header />
 
-        {/* Dynamic Page Content */}
-        {children}
+        {/* Dynamic Page Content (Added padding-top so fixed Header doesn't hide content) */}
+        <div className="pt-16 md:pt-20 min-h-screen">
+          {children}
+        </div>
 
         {/* Next.js Optimized External Scripts */}
         <Script 
